@@ -23,5 +23,5 @@ jobs:
         run: docker build -t time-devops-project/mikeproject:${{ env.SHORT_SHA }} .
 
       - name: Push Docker Image
-        run: docker push marckdocker/time-devops-project:${{ env.SHORT_SHA }} docker push marckdocker/time-devops-project:tagname
+        run: docker push marckdocker/time-devops-project:${{ env.SHORT_SHA }}
 
