@@ -1,6 +1,6 @@
 image:
   repository: ${{ secrets.DOCKER_USERNAME }}/time-devops-project
-  tag: cc0dc4a
+  tag: 3875eaf
   pullPolicy: IfNotPresent
 
 service:
