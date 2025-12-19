@@ -2,12 +2,17 @@ image:
   repository: ${{ secrets.DOCKER_USERNAME }}/time-devops-project
   tag: cc0dc4a
   pullPolicy: IfNotPresent
+
 service:
   type: ClusterIP
   port: 8080
+
 ingress:
   enabled: false
-serviceaccount:
-  enabled: false
+
+serviceAccount:
+  create: false
+  name: ""
+
 autoscaling:
   enabled: false
