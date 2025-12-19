@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: time-devops-project
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/marck-devops/time-devops-project.git"
+    targetRevisionn: HEAD
+    path: time-devops-project
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    

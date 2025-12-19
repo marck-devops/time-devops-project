@@ -1,0 +1,13 @@
+image:
+  repository: ${{ secrets.DOCKER_USERNAME }}/time-devops-project
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 8080
+ingress:
+  enabled: false
+serviceaccount:
+  enabled: false
+autoscaling:
+  enabled: false
